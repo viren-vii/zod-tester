@@ -3,7 +3,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { extractUncommentedCode } from "../utils";
-import { fromZodError, isValidationError } from "zod-validation-error";
+import { fromZodError } from "zod-validation-error";
 
 const Output = ({
   schemaRaw,

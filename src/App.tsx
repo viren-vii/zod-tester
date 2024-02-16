@@ -2,7 +2,6 @@ import { useState } from "react";
 import InputEditor from "./components/InputEditor";
 import Output from "./components/Output";
 import SchemaEditor from "./components/SchemaEditor";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { z } from "zod";
 
 export default function App() {
