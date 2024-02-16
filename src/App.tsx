@@ -7,20 +7,17 @@ import { z } from "zod";
 export default function App() {
   const [schemaRaw, setSchemaRaw] = useState(
     localStorage.getItem("schema") ??
-      `//Insert here your Zod schema
-  z.object({
-    greeting:z.string()
-  })
+      `//Insert here your Zod schema\nz.object({
+  greeting:z.string()
+})
   `
   );
   const [inputRaw, setInputRaw] = useState(
     localStorage.getItem("input") ??
-      `//Insert here the object to validate
-    {greeting:"Hello World!"}`
+      `//Insert here the object to validate\n{greeting:"Hello World!"}`
   );
 
-  window.addEventListener("beforeunload", (ev) => {
-    ev.preventDefault();
+  window.addEventListener("beforeunload", () => {
     localStorage.setItem("schema", schemaRaw);
     localStorage.setItem("input", inputRaw);
   });
