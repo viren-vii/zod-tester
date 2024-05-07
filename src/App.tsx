@@ -26,20 +26,20 @@ export default function App() {
     <div className="h-[100vh] w-[100vw] bg-[#282C34]">
       <div className="flex flex-col">
         <div className="flex flex-col h-[65vh] md:flex-row">
-          <div className="flex flex-col flex-1 h-[50%] md:h-full">
+          <div className="flex flex-col flex-1 md:max-w-[50%] h-[50%] md:h-full">
             <pre className="pl-2 text-white/40 text-sm bg-white/10">
               Write Schema
             </pre>
             <SchemaEditor value={schemaRaw} setValue={setSchemaRaw} />
           </div>
-          <div className="flex flex-col flex-1 h-[50%] md:h-full">
+          <div className="flex flex-col flex-1 md:max-w-[50%] h-[50%] md:h-full">
             <pre className="pl-2 text-white/40 text-sm bg-white/10">
               Write Input
             </pre>
             <InputEditor value={inputRaw} setValue={setInputRaw} />
           </div>
         </div>
-        <div className="flex h-[35vh]">
+        <div className="flex h-[35vh] max-w-[100%]">
           <Output schemaRaw={schemaRaw} inputRaw={inputRaw} z={z} />
         </div>
       </div>
